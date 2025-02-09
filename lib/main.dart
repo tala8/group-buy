@@ -1209,20 +1209,71 @@ class ProductsPage extends StatelessWidget {
           },
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            childAspectRatio: 0.75,
+      body: Column(
+        children: [
+          // 🔍 شريط البحث
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 40,
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.search, color: Colors.grey),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: TextField(
+                      decoration: const InputDecoration(
+                        hintText: "البحث",
+                        border: InputBorder.none,
+                      ),
+                      onChanged: (value) {
+                        // TODO: إضافة كود البحث هنا
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
-          itemCount: products.length,
-          itemBuilder: (context, index) {
-            return ProductCard(product: products[index]);
-          },
-        ),
+
+          // ⏬ أزرار الترتيب والتصنيف بنفس شكل الصورة
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: Row(
+              children: [
+                _buildFilterButton(Icons.sort, "ترتيب"),
+                const SizedBox(width: 8),
+                _buildFilterButton(Icons.filter_list, "تصنيف"),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 10),
+
+          // 📌 المنتجات
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 0.75,
+                ),
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  return ProductCard(product: products[index]);
+                },
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: Container(
         padding: const EdgeInsets.symmetric(vertical: 10),
@@ -1240,9 +1291,30 @@ class ProductsPage extends StatelessWidget {
     );
   }
 }
+
+// 📌 زر التصنيف والترتيب بنفس تصميم الصورة
+Widget _buildFilterButton(IconData icon, String label) {
+  return ElevatedButton.icon(
+    onPressed: () {
+      // TODO: أضف هنا منطق الترتيب أو التصنيف عند الضغط على الزر
+    },
+    icon: Icon(icon, size: 18, color: Colors.black),
+    label: Text(label, style: const TextStyle(color: Colors.black)),
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+        side: const BorderSide(color: Colors.grey),
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+    ),
+  );
+}
+
+// 📌 الأزرار السفلية
 Widget _buildBottomButton(BuildContext context, String imagePath, String label) {
   return Column(
-    mainAxisSize: MainAxisSize.min,
+mainAxisSize: MainAxisSize.min,
     children: [
       Image.asset(imagePath, width: 40, height: 40, fit: BoxFit.contain),
       const SizedBox(height: 4),
@@ -1250,10 +1322,9 @@ Widget _buildBottomButton(BuildContext context, String imagePath, String label) 
     ],
   );
 }
-// ✅ كود تصميم بطاقة المنتج
 class ProductCard extends StatelessWidget {
   final Product product;
-  ProductCard({required this.product});
+  const ProductCard({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -1309,8 +1380,8 @@ class Product {
 
 // ✅ قائمة المنتجات مع مسارات الصور المحلية
 List<Product> products = [
-  Product(name: "لابتوب ماك بوك اير", imagePath: ".dart_tool/chrome-device/Default/assets/macbook.jpg", price: 3200, reviews: 6890),
-  Product(name: "لابتوب 2 في 1 | هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/huawei_tablet.jpg", price: 3500, reviews: 152344),
-  Product(name: "جهاز لوحي + قلم هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/huawei_laptop.jpg", price: 1500, reviews: 523456),
-  Product(name: "جهاز لابتوب هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/huawei_laptop2.jpg", price: 3000, reviews: 45678),
+  Product(name: "لابتوب ماك بوك اير", imagePath: ".dart_tool/chrome-device/Default/assets/m.jpg", price: 3200, reviews: 6890),
+  Product(name: "لابتوب 2 في 1 | هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/h.jpg", price: 3500, reviews: 152344),
+  Product(name: "جهاز لوحي + قلم هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/p.jpg", price: 1500, reviews: 523456),
+  Product(name: "جهاز لابتوب هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/l.jpg", price: 3000, reviews: 45678),
 ];

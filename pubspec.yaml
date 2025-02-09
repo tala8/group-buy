@@ -71,6 +71,10 @@ flutter:
     - .dart_tool\chrome-device\Default\assets\favorite_icon.jpg
     - .dart_tool\chrome-device\Default\assets\settings_icon.png
     - .dart_tool\chrome-device\Default\assets\cart_icon.png
+    - .dart_tool/chrome-device/Default/assets/l.jpg
+    - .dart_tool\chrome-device\Default\assets\m.jpg
+    - .dart_tool\chrome-device\Default\assets\p.jpg
+    - .dart_tool\chrome-device\Default\assets\h.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
