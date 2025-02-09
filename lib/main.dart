@@ -419,97 +419,98 @@
 // //     );
 // //   }
 // // }
-// // import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-// // void main() => runApp(MyApp());
+// void main() => runApp(MyApp());
 
-// // class MyApp extends StatelessWidget {
-// //   const MyApp({super.key});
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return MaterialApp(
-// //       debugShowCheckedModeBanner: false,
-// //       home: WelcomePage(),
-// //       routes: {
-// //         '/login': (context) => LoginPage(),
-// //         '/signup': (context) => SignupPage(),
-// //         '/forgot': (context) => ForgotPasswordPage(),
-// //       },
-// //     );
-// //   }
-// // }
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: WelcomePage(),
+//       routes: {
+//         '/login': (context) => LoginPage(),
+//         '/signup': (context) => SignupPage(),
+//         '/forgot': (context) => ForgotPasswordPage(),
+//       },
+//     );
+//   }
+// }
 
-// // // الصفحة الرئيسية (3.10) مع الصورة المرفقة
-// // class WelcomePage extends StatelessWidget {
-// //   const WelcomePage({super.key});
+// // الصفحة الرئيسية (3.10) مع الصورة المرفقة
+// class WelcomePage extends StatelessWidget {
+//   const WelcomePage({super.key});
 
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return Scaffold(
-// //       body: Container(
-// //         child: Image.asset(
-// //           '.dart_tool/chrome-device/Default/assets/welcome_bg.jpg', // اسم الصورة كما هو بدون تغيير
-// //           fit: BoxFit.cover, // تغطية الشاشة بالكامل
-// //           width: double.infinity,
-// //           height: double.infinity,
-// //         ),
-// //       ),
-// //     );
-// //   }
-// // }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Container(
+//         child: Image.asset(
+//           '.dart_tool/chrome-device/Default/assets/welcome_bg.jpg', // اسم الصورة كما هو بدون تغيير
+//           fit: BoxFit.cover, // تغطية الشاشة بالكامل
+//           width: double.infinity,
+//           height: double.infinity,
+//         ),
+//       ),
+//     );
+//   }
+// }
 
-// //   Widget build(BuildContext context) {
-// //     return Scaffold(
-// //       body: Directionality(
-// //         textDirection: TextDirection.rtl,
-// //         child: Stack(
-// //           children: [
-// //             // الصورة الخلفية
-// //             Image.asset(
-// //               '.dart_tool/chrome-device/Default/assets/welcome_bg.jpg', // تأكد من إضافة الصورة في مجلد assets
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Directionality(
+//         textDirection: TextDirection.rtl,
+//         child: Stack(
+//           children: [
+//             // الصورة الخلفية
+//             Image.asset(
+//               '.dart_tool/chrome-device/Default/assets/welcome_bg.jpg', // تأكد من إضافة الصورة في مجلد assets
 
-// //               fit: BoxFit.cover,
-// //               width: double.infinity,
-// //               height: double.infinity,
-// //             ),
-// //             Container(
-// //               color: Colors.black.withOpacity(0.4),
-// //               child: Center(
-// //                 child: Column(
-// //                   mainAxisAlignment: MainAxisAlignment.center,
-// //                   children: [
-// //                     Text(
-// //                       'اجتمع، اشتر، ووفر أكثر!',
-// //                       style: TextStyle(
-// //                         fontSize: 28,
-// //                         color: Colors.white,
-// //                         fontWeight: FontWeight.bold,
-// //                       ),
-// //                       textAlign: TextAlign.center,
-// //                     ),
-// //                     SizedBox(height: 30),
-// //                     ElevatedButton(
-// //                       style: ElevatedButton.styleFrom(
-// //                         backgroundColor: Colors.orange,
-// //                         padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-// //                       ),
-// //                       onPressed: () => Navigator.pushNamed(context, '/login'),
-// //                       child: Text(
-// //                         'انطلق!',
-// //                         style: TextStyle(fontSize: 20),
-// //                       ),
-// //                     ),
-// //                   ],
-// //                 ),
-// //               ),
-// //             ),
-// //           ],
-// //         ),
-// //       ),
-// //     );
-// //   }
-// // }
+//               fit: BoxFit.cover,
+//               width: double.infinity,
+//               height: double.infinity,
+//             ),
+//             Container(
+//               color: Colors.black.withOpacity(0.4),
+//               child: Center(
+//                 child: Column(
+//                   mainAxisAlignment: MainAxisAlignment.center,
+//                   children: [
+//                     Text(
+//                       'اجتمع، اشتر، ووفر أكثر!',
+//                       style: TextStyle(
+//                         fontSize: 28,
+//                         color: Colors.white,
+//                         fontWeight: FontWeight.bold,
+//                       ),
+//                       textAlign: TextAlign.center,
+//                     ),
+//                     SizedBox(height: 30),
+//                     ElevatedButton(
+//                       style: ElevatedButton.styleFrom(
+//                         backgroundColor: Colors.orange,
+//                         padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+//                       ),
+//                       onPressed: () => Navigator.pushNamed(context, '/login'),
+//                       child: Text(
+//                         'انطلق!',
+//                         style: TextStyle(fontSize: 20),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
 // import 'package:flutter/material.dart';
 
 // void main() => runApp(MyApp());
@@ -714,6 +715,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      locale: const Locale('ar', ''), // ✅ تحديد اللغة العربية
+      builder: (context, child) {
+        return Directionality(
+          textDirection: TextDirection.rtl, // ✅ جعل النصوص تبدأ من اليمين
+          child: child!,
+        );
+      },
       initialRoute: '/',
       routes: {
         '/': (context) => WelcomePage(),
@@ -721,8 +729,10 @@ class MyApp extends StatelessWidget {
         '/signup': (context) => SignupPage(),
         '/forgot': (context) => ForgotPasswordPage(),
          '/profile': (context) => ProfilePage(), // الصفحة 
+         '/categories': (context) => CategoriesPage(),
       },
     );
+    
   }
 }
 
@@ -764,6 +774,7 @@ class WelcomePage extends StatelessWidget {
   }
 }
 
+
 // 2. صفحة تسجيل الدخول (3.11)
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -803,7 +814,7 @@ class LoginPage extends StatelessWidget {
                   backgroundColor: const Color.fromARGB(255, 27, 25, 22),
                   minimumSize: const Size(double.infinity, 50),
                 ),
-                onPressed: () {},
+                onPressed: () {Navigator.pushNamed(context, '/categories');},
                 child: const Text('تسجيل الدخول'),
               ),
               const SizedBox(height: 20),
@@ -824,6 +835,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
 
 // 3. صفحة إنشاء حساب (3.12)
 class SignupPage extends StatelessWidget {
@@ -891,6 +903,7 @@ decoration: InputDecoration(
   }
 }
 
+
 // 4. صفحة نسيان كلمة المرور (3.13)
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});
@@ -929,7 +942,177 @@ class ForgotPasswordPage extends StatelessWidget {
     );
   }
 }
+
+class CategoriesPage extends StatelessWidget {
+  const CategoriesPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('الفئات'),
+        centerTitle: true,
+         actions: [
+    Padding(
+      padding: const EdgeInsets.only(right: 16), // هامش من اليمين
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pushNamed(context, '/profile'); // التوجيه إلى صفحة البروفايل
+        },
+        child: CircleAvatar(
+          radius: 20, // حجم الدائرة
+          backgroundColor: Colors.grey[300], // لون الخلفية
+          child: Icon(Icons.person, size: 24, color: Colors.black), // أيقونة المستخدم
+        ),
+      ),
+    ),
+  ],
+),
+      
+      body: Column(
+        children: [
+     _buildSearchBar(), // ✅ إضافة شريط البحث في الأعلى
+     const SizedBox(height: 10), // ✅ مسافة بسيطة بعد البحث
+
+          // الشبكة (GridView) توضع داخل Expanded حتى تأخذ المساحة العلوية
+          Expanded(
+  child: GridView.count(
+    padding: const EdgeInsets.all(16),
+    crossAxisCount: 2,
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    childAspectRatio: 0.9,
+    children: [
+      _buildCategoryItem('الجوالات والاكسسوارات', '.dart_tool/chrome-device/Default/assets/moblies.jpg'),
+
+      // ✅ تم تعديل هذا الجزء ليشمل الانتقال إلى صفحة المنتجات
+      GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ProductsPage()), // الانتقال إلى صفحة المنتجات
+          );
+        },
+        child: Card(
+          elevation: 4,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('.dart_tool/chrome-device/Default/assets/image.png', width: 120, height: 120, fit: BoxFit.contain),
+              SizedBox(height: 10),
+              Text(
+                "لابتوبات وأجهزة لوحية",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+        ),
+      ),
+
+      _buildCategoryItem('الكاميرات وكاميرات المراقبة', '.dart_tool/chrome-device/Default/assets/home_devices.jpg'),
+      _buildCategoryItem('ألعاب الفيديو', '.dart_tool/chrome-device/Default/assets/accessories.jpg'),
+    ],
+  ),
+),
+
+          // ✅ الأزرار السفلية بصور مخصصة
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            color: Colors.white, // الخلفية بيضاء مثل الصورة
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _buildBottomButton('.dart_tool/chrome-device/Default/assets/home_icon.png', ""),
+                _buildBottomButton('.dart_tool/chrome-device/Default/assets/favorite_icon.jpg', ""),
+                _buildBottomButton('.dart_tool/chrome-device/Default/assets/cart_icon.png', ""),
+                _buildBottomButton('.dart_tool/chrome-device/Default/assets/settings_icon.png', ""),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ✅ عنصر الفئة داخل الشبكة
+  Widget _buildCategoryItem(String title, String imagePath) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(imagePath, width: 120, height: 120, fit: BoxFit.contain),
+          const SizedBox(height: 10),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+    );
+  }
+  
+
+  // ✅ عنصر زر سفلي بصورة مخصصة
+  Widget _buildBottomButton(String imagePath, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Image.asset(imagePath, width: 40, height: 40, fit: BoxFit.contain),
+        const SizedBox(height: 4),
+        Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+      ],
+    );
+  }
+}
+Widget _buildSearchBar() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+    child: Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(25),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.1),
+            spreadRadius: 2,
+            blurRadius: 5,
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextField(
+              textAlign: TextAlign.right, // ✅ النص في اليمين
+              decoration: InputDecoration(
+                hintText: "البحث",
+                hintStyle: TextStyle(color: Colors.grey[400]),
+                border: InputBorder.none,
+                contentPadding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Icon(Icons.search, color: Colors.grey[400]),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+
+
+
+
 class ProfilePage extends StatelessWidget {
+  final TextEditingController _passwordController = TextEditingController(text: "********");
   final TextEditingController _emailController = TextEditingController(text: "user@example.com");
   final TextEditingController _usernameController = TextEditingController(text: "محمد أحمد");
   final TextEditingController _cityController = TextEditingController(text: "الرياض");
@@ -959,6 +1142,7 @@ class ProfilePage extends StatelessWidget {
           child: ListView(
             children: [
               _buildProfileField('البريد الإلكتروني', _emailController),
+              _buildProfileField('كلمة المرور', _passwordController, obscureText: true),
               _buildProfileField('اسم المستخدم', _usernameController),
               _buildProfileField('المدينة', _cityController),
               _buildProfileField('المحافظة', _regionController),
@@ -966,7 +1150,7 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.orange,
+                  backgroundColor: const Color.fromARGB(255, 22, 22, 22),
                   minimumSize: const Size(double.infinity, 50),
                 ),
                 onPressed: () {
@@ -981,16 +1165,152 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildProfileField(String label, TextEditingController controller) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
-      child: TextFormField(
-        controller: controller,
-        decoration: InputDecoration(
-          labelText: label,
-          border: const OutlineInputBorder(),
+//   Widget _buildProfileField(String label, TextEditingController controller) {
+//     return Padding(
+//       padding: const EdgeInsets.only(bottom: 20),
+//       child: TextFormField(
+//         controller: controller,
+//         decoration: InputDecoration(
+//           labelText: label,
+//           border: const OutlineInputBorder(),
+//         ),
+//       ),
+//     );
+//   }
+// }
+   Widget _buildProfileField(String label, TextEditingController controller, {bool obscureText = false}) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 20),
+    child: TextFormField(
+      controller: controller,
+      obscureText: obscureText,
+      decoration: InputDecoration(
+        labelText: label,
+        border: const OutlineInputBorder(),
+      ),
+    ),
+  );
+}
+
+}
+class ProductsPage extends StatelessWidget {
+  const ProductsPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("لابتوبات وأجهزة لوحية"),
+        centerTitle: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            childAspectRatio: 0.75,
+          ),
+          itemCount: products.length,
+          itemBuilder: (context, index) {
+            return ProductCard(product: products[index]);
+          },
+        ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _buildBottomButton(context, '.dart_tool/chrome-device/Default/assets/home_icon.png', ""),
+            _buildBottomButton(context, '.dart_tool/chrome-device/Default/assets/favorite_icon.jpg', ""),
+            _buildBottomButton(context, '.dart_tool/chrome-device/Default/assets/cart_icon.png', ""),
+            _buildBottomButton(context, '.dart_tool/chrome-device/Default/assets/settings_icon.png', ""),
+          ],
         ),
       ),
     );
   }
 }
+Widget _buildBottomButton(BuildContext context, String imagePath, String label) {
+  return Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Image.asset(imagePath, width: 40, height: 40, fit: BoxFit.contain),
+      const SizedBox(height: 4),
+      Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+    ],
+  );
+}
+// ✅ كود تصميم بطاقة المنتج
+class ProductCard extends StatelessWidget {
+  final Product product;
+  ProductCard({required this.product});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: Colors.grey.shade300),
+      ),
+      padding: EdgeInsets.all(8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Image.asset(product.imagePath, fit: BoxFit.cover), // تحميل الصورة من assets
+          ),
+          SizedBox(height: 8),
+          Text(product.name, style: TextStyle(fontWeight: FontWeight.bold)),
+          Text(
+  "${product.price.toString()} ريال", // ✅ تحويل الرقم إلى نص وإضافة "ريال" بعده
+  style: const TextStyle(color: Colors.green),
+  
+),
+Row(
+  children: [
+    Icon(Icons.star, color: Colors.amber, size: 16),
+    Icon(Icons.star, color: Colors.amber, size: 16),
+    Icon(Icons.star, color: Colors.amber, size: 16),
+    Icon(Icons.star, color: Colors.amber, size: 16),
+    Icon(Icons.star_half, color: Colors.amber, size: 16),
+    const SizedBox(width: 5),
+    Text(
+      "${product.reviews}  ", // ✅ عدد التقييمات بجانب النجوم
+      style: const TextStyle(fontSize: 12, color: Colors.grey),
+    ),
+  ],
+)
+        ],
+      ),
+    );
+  }
+}
+
+// ✅ كود كائن المنتج
+class Product {
+  final String name;
+  final String imagePath; // استخدام مسار الصورة بدلاً من رابط
+  final double price;
+
+  final int reviews; // ✅ أضف هذا السطر
+
+  Product({required this.name, required this.imagePath, required this.price, required this.reviews});
+}
+
+// ✅ قائمة المنتجات مع مسارات الصور المحلية
+List<Product> products = [
+  Product(name: "لابتوب ماك بوك اير", imagePath: ".dart_tool/chrome-device/Default/assets/macbook.jpg", price: 3200, reviews: 6890),
+  Product(name: "لابتوب 2 في 1 | هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/huawei_tablet.jpg", price: 3500, reviews: 152344),
+  Product(name: "جهاز لوحي + قلم هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/huawei_laptop.jpg", price: 1500, reviews: 523456),
+  Product(name: "جهاز لابتوب هواوي", imagePath: ".dart_tool/chrome-device/Default/assets/huawei_laptop2.jpg", price: 3000, reviews: 45678),
+];
